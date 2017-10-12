@@ -61,6 +61,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolio Page',
+        msg: 'Welcome to website'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         status: 'Unable to handle the request'
@@ -68,5 +75,5 @@ app.get('/bad', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('Server is up on port ${port}');
+    console.log(`Server is up on port ${port}`);
 });
